@@ -3,12 +3,12 @@ package michachail.group.dto;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import michachail.shedule.model.Shedule;
+import michachail.schedule.model.Schedule;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
 public class GroupDto {
     private long group_number;
     private String speciality;
-    private Shedule shedule;
+    private Schedule schedule;
 }

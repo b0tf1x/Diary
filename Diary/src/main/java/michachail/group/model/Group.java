@@ -4,7 +4,7 @@ package michachail.group.model;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import michachail.shedule.model.Shedule;
+import michachail.schedule.model.Schedule;
 
 import javax.persistence.*;
 
@@ -19,6 +19,6 @@ public class Group {
     private long group_number;
     private String speciality;
     @ManyToOne
-    @JoinColumn(name = "group_group_number")
-    private Shedule shedule;
+    @JoinColumn(name = "shedule_id_shedule")
+    private Schedule schedule;
 }

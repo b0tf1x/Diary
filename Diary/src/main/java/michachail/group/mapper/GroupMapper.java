@@ -8,7 +8,7 @@ public class GroupMapper {
         return new Group(
                 groupDto.getGroup_number(),
                 groupDto.getSpeciality(),
-                groupDto.getShedule()
+                groupDto.getSchedule()
         );
     }
 
@@ -16,7 +16,7 @@ public class GroupMapper {
         return new GroupDto(
                 group.getGroup_number(),
                 group.getSpeciality(),
-                group.getShedule()
+                group.getSchedule()
         );
     }
 }
