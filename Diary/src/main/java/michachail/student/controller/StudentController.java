@@ -22,22 +22,25 @@ public class StudentController {
     private final StudentService studentService;
 
     @GetMapping("/group/{groupId}")
-    public List<StudentDto> findStudentsByGroup(@PathVariable long groupId){
+    public List<StudentDto> findStudentsByGroup(@PathVariable long groupId) {
         log.warn("Поиск студентов по группе");
         return studentService.findStudentsByGroup(groupId);
     }
+
     @GetMapping("/{studentId}")
-    public StudentDto findStudentById(@PathVariable long studentId){
+    public StudentDto findStudentById(@PathVariable long studentId) {
         log.warn("Поиск по айди студента");
         return studentService.findStudentById(studentId);
     }
+
     @GetMapping
-    public StudentDto findStudentByNameAndGroup(@RequestParam String name, @RequestParam long group){
+    public StudentDto findStudentByNameAndGroup(@RequestParam String name, @RequestParam long group) {
         log.warn("Поиск по имени и группе");
-        return studentService.findStudentByNameAndGroup(name,group);
+        return studentService.findStudentByNameAndGroup(name, group);
     }
+
     @PostMapping
-    public StudentDto create(@RequestBody StudentDto studentDto){
+    public StudentDto create(@RequestBody StudentDto studentDto) {
         log.warn("Создание пользователя");
         return studentService.create(studentDto);
     }

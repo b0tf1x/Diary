@@ -11,6 +11,7 @@ import michachail.subject.model.Subject;
 @NoArgsConstructor
 public class MarksDto {
     private long id_marks;
+    private long attendance;
     private long current_control;
     private long creative_rating;
     private long score;

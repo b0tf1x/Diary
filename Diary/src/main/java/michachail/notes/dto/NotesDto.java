@@ -11,5 +11,5 @@ import michachail.student.model.Student;
 public class NotesDto {
     private long id;
     private String content;
-    private Student student;
+    private long studentId;
 }

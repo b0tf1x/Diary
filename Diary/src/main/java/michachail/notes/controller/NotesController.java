@@ -5,18 +5,17 @@ import michachail.notes.dto.NotesDto;
 import michachail.notes.service.NotesService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.validation.annotation.Validated;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
-@Validated
 @RestController
-@RequestMapping(path = "/notes")
-@RequiredArgsConstructor(onConstructor_ = @Autowired)
+@RequestMapping("/notes")
+@RequiredArgsConstructor
 public class NotesController {
     private final NotesService notesService;
+    @GetMapping("/{studentId}")
+    public NotesDto getByStudentId(@PathVariable long studentId){
+        return notesService.getByStudentId(studentId);
+    }
     @PostMapping("/{studentId}")
     public NotesDto create(@PathVariable long studentId, @RequestBody NotesDto notesDto){
         return notesService.create(studentId,notesDto);

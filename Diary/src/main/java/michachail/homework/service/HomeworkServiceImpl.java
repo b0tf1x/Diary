@@ -39,7 +39,6 @@ public class HomeworkServiceImpl implements HomeworkService {
         });
         return getHomeworkByStudent(student.getId_student());
     }
-    @Transactional
     @Override
     public HomeworkDto create(long studentId, HomeworkDto homeworkDto){
         studentRepository.findById(studentId).orElseThrow(()->{

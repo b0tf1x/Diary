@@ -16,4 +16,7 @@ public interface StudentRepository extends JpaRepository<Student, Long> {
             "where student.full_name = ?1 " +
             "and student.group.group_number = ?2")
     Optional<Student> findStudentByNameAndGroup(String name, long group);
+    @Query("select student from Student student " +
+            "where student.id_student = ?1 ")
+    Optional<Student> findStudentById(long studentId);
 }
