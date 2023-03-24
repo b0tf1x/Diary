@@ -16,7 +16,7 @@ public class ScheduleServiceImpl implements ScheduleService {
     private final ScheduleRepository scheduleRepository;
 
     @Override
-    public List<ScheduleDto> findScheduleByWeekAndGroup(long groupNum, long weekNum) {
+    public List<ScheduleDto> findScheduleByWeekAndGroup(long groupNum, int weekNum) {
         return scheduleRepository.findScheduleByWeekAndGroup(groupNum, weekNum)
                 .stream().
                 map(ScheduleMapper::toSheduleDto).

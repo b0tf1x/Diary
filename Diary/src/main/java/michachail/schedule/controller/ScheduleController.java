@@ -19,9 +19,9 @@ import java.util.List;
 public class ScheduleController {
     private final ScheduleService scheduleService;
 
-    @GetMapping("/{groupNum}/weekNum")
-    public List<ScheduleDto> findScheduleByGroupAndWeek(@PathVariable long groupNum,
-                                                       @RequestParam long weekNum) {
-        return scheduleService.findScheduleByWeekAndGroup(groupNum, weekNum);
+    @GetMapping
+    public List<ScheduleDto> findScheduleByGroupAndWeek(@RequestParam long groupId,
+                                                       @RequestParam int weekNumber) {
+        return scheduleService.findScheduleByWeekAndGroup(groupId, weekNumber);
     }
 }

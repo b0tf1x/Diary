@@ -5,5 +5,5 @@ import michachail.schedule.dto.ScheduleDto;
 import java.util.List;
 
 public interface ScheduleService {
-    List<ScheduleDto> findScheduleByWeekAndGroup(long groupNum, long weekNum);
+    List<ScheduleDto> findScheduleByWeekAndGroup(long groupNum, int weekNum);
 }

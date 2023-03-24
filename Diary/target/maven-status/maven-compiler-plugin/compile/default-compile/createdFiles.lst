@@ -29,7 +29,6 @@ michachail\marks\service\MarksService.class
 michachail\notes\storage\NotesRepository.class
 michachail\notes\model\Notes.class
 michachail\group\service\GroupService.class
-michachail\criterion\model\Criterion.class
 michachail\student\storage\StudentRepository.class
 michachail\schedule\controller\ScheduleController.class
 michachail\exceptions\ExceptionsHandler.class
@@ -40,7 +39,6 @@ michachail\homework\controller\HomeworkController.class
 michachail\homework\model\Homework.class
 michachail\StartDiary.class
 michachail\subject\model\Subject.class
-michachail\criterion\storage\CriterionRepository.class
 michachail\notes\mapper\NotesMapper.class
 michachail\schedule\mapper\ScheduleMapper.class
 michachail\group\mapper\GroupMapper.class

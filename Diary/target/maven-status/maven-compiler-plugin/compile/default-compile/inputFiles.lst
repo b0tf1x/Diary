@@ -4,7 +4,6 @@ C:\Users\admhe\dev\Diary\Diary\src\main\java\michachail\classroom\storage\Classr
 C:\Users\admhe\dev\Diary\Diary\src\main\java\michachail\notes\storage\NotesRepository.java
 C:\Users\admhe\dev\Diary\Diary\src\main\java\michachail\notes\mapper\NotesMapper.java
 C:\Users\admhe\dev\Diary\Diary\src\main\java\michachail\homework\dto\HomeworkDto.java
-C:\Users\admhe\dev\Diary\Diary\src\main\java\michachail\criterion\model\Criterion.java
 C:\Users\admhe\dev\Diary\Diary\src\main\java\michachail\notes\service\NotesService.java
 C:\Users\admhe\dev\Diary\Diary\src\main\java\michachail\homework\service\HomeworkServiceImpl.java
 C:\Users\admhe\dev\Diary\Diary\src\main\java\michachail\marks\mapper\MarksMapper.java
@@ -21,7 +20,6 @@ C:\Users\admhe\dev\Diary\Diary\src\main\java\michachail\marks\service\MarksServi
 C:\Users\admhe\dev\Diary\Diary\src\main\java\michachail\StartDiary.java
 C:\Users\admhe\dev\Diary\Diary\src\main\java\michachail\group\dto\GroupDto.java
 C:\Users\admhe\dev\Diary\Diary\src\main\java\michachail\notes\model\Notes.java
-C:\Users\admhe\dev\Diary\Diary\src\main\java\michachail\criterion\storage\CriterionRepository.java
 C:\Users\admhe\dev\Diary\Diary\src\main\java\michachail\exceptions\NotFoundException.java
 C:\Users\admhe\dev\Diary\Diary\src\main\java\michachail\notes\controller\NotesController.java
 C:\Users\admhe\dev\Diary\Diary\src\main\java\michachail\homework\controller\HomeworkController.java
