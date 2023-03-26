@@ -8,4 +8,5 @@ public interface HomeworkService {
     List<HomeworkDto> getHomeworkByStudent(long studentId);
     List<HomeworkDto>getHomeworkByStudentAndGroup(String name, long group);
     HomeworkDto create(long studentId, HomeworkDto homeworkDto);
+    void deleteForStudent(long studentId);
 }

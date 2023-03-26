@@ -8,6 +8,7 @@ import michachail.homework.model.Homework;
 import michachail.homework.storage.HomeworkRepository;
 import michachail.student.model.Student;
 import michachail.student.storage.StudentRepository;
+import org.aspectj.weaver.ast.Not;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -41,10 +42,15 @@ public class HomeworkServiceImpl implements HomeworkService {
     }
     @Override
     public HomeworkDto create(long studentId, HomeworkDto homeworkDto){
-        studentRepository.findById(studentId).orElseThrow(()->{
+        Student student = studentRepository.findById(studentId).orElseThrow(()->{
             throw new NotFoundException("Студент не найден");
         });
-        Homework homework = homeworkRepository.save(HomeworkMapper.toHomework(homeworkDto));
+        Homework homework = homeworkRepository.save(HomeworkMapper.toHomework(homeworkDto,student));
         return HomeworkMapper.toHomeworkDto(homework);
+    }
+    @Override
+    @Transactional
+    public void deleteForStudent(long studentId){
+        homeworkRepository.deleteForStudent(studentId);
     }
 }

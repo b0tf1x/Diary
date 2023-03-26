@@ -17,6 +17,6 @@ public class HomeworkDto {
     private String content;
     private LocalDateTime deadline;
     private String status;
-    private Subject subject;
-    private Student student;
+    private Long subject;
+    private long student;
 }

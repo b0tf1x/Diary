@@ -11,10 +11,15 @@ import michachail.student.model.Student;
 import michachail.student.storage.StudentRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
+
+import java.util.List;
+import java.util.stream.Collectors;
 
 @Service
 @RequiredArgsConstructor(onConstructor_ = @Autowired)
 @Slf4j
+@Transactional
 public class NotesServiceImpl implements NotesService {
     private final NotesRepository notesRepository;
     private final StudentRepository studentRepository;
@@ -28,11 +33,18 @@ public class NotesServiceImpl implements NotesService {
         return NotesMapper.toNotesDto(notes);
     }
     @Override
-    public NotesDto getByStudentId(long studentId){
+    public List<NotesDto> getByStudentId(long studentId){
         studentRepository.findStudentById(studentId).orElseThrow(() -> {
             throw new NotFoundException("Студент не найден "+studentId);
         });
-        Notes notes = notesRepository.findByStudentId(studentId);
-        return NotesMapper.toNotesDto(notes);
+        List<Notes> notes = notesRepository.findByStudentId(studentId);
+        return notes.stream()
+                .map(NotesMapper::toNotesDto)
+                .collect(Collectors.toList());
+    }
+    @Override
+    @Transactional
+    public void deleteAllForStudent(long studentId){
+        notesRepository.deleteAllByStudentId_student(studentId);
     }
 }
