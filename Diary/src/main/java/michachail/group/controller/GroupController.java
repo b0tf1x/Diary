@@ -11,6 +11,7 @@ import java.util.List;
 @RequestMapping("/group")
 @RequiredArgsConstructor
 @Slf4j
+@CrossOrigin(origins = "*", allowedHeaders = "*")
 public class GroupController {
     private final GroupService groupService;
     @GetMapping

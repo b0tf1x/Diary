@@ -12,6 +12,7 @@ import java.util.List;
 @RestController
 @RequestMapping("/notes")
 @RequiredArgsConstructor
+@CrossOrigin(origins = "*", allowedHeaders = "*")
 public class NotesController {
     private final NotesService notesService;
     @GetMapping("/{studentId}")

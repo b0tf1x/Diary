@@ -13,6 +13,7 @@ import java.util.List;
 @RestController
 @RequestMapping(path = "/homework")
 @RequiredArgsConstructor(onConstructor_ = @Autowired)
+@CrossOrigin(origins = "*", allowedHeaders = "*")
 public class HomeworkController {
     private final HomeworkService homeworkService;
     @GetMapping("/{studentId}")
